@@ -4,8 +4,8 @@ import random
 word_list_of_fruits = ['Fig', 'Cloudberry', 'Mango', 'Cherry', 'Lime']
 
 print(word_list_of_fruits)
-word = random.choice(word_list_of_fruits)
-print(word)
+random_word_from_list = random.choice(word_list_of_fruits)
+print(random_word_from_list)
 
 user_guess = input("Guess letter:")
 
