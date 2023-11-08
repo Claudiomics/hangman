@@ -2,38 +2,26 @@
 import random 
 
 word_list_of_fruits = ['Fig', 'Cloudberry', 'Mango', 'Cherry', 'Lime']
-
-#print(word_list_of_fruits)
 random_word_from_list = random.choice(word_list_of_fruits)
-#print(random_word_from_list)
-
-#user_guess = input("Guess letter:")
-
-#if len(user_guess) == 1 and user_guess.isalpha():
- #   print("Good guess!")
-#else:
-  #  print("Oops! That is not a valid input.")
 
 
-#while user_guess in random_word_from_list:
-while True:
-    user_guess = input("Guess letter: ") 
-    if len(user_guess) == 1 and user_guess.isalpha():
-        break
+def check_guess(guess):
+    guess.lower()
+    if guess in random_word_from_list:
+        print(f"Good guess! '{guess}' is in the word.")
     else:
-        print("Invalid letter. Please, enter a single alphabetical character.")
+        print(f"Sorry, '{guess}' is not in the word. Try again.")
 
-# while True:    
-#    if len(user_guess) == 1 and user_guess.isalpha():
-#    print("Good guess!")  
-#        if user_guess in random_word_from_list:
-#            print("Good guess!")
-#        elif user_guess not in random_word_from_list:
-#            break
-#            print("Wrong. Try again, fool.")
-#    else:
-#        print("Oops! That is not a valid input.")
+def ask_for_input():
+    check_guess(guess)
+    while True:
+        if len(guess) == 1 and guess.isalpha():
+            break
+        else:
+            print("Invalid letter. Please, enter a single alphabetical character.")
 
+guess = input("Guess letter: ")
 
+ask_for_input()
 
 # %%
