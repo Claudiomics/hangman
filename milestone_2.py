@@ -1,15 +1,15 @@
 # %%
 import random 
 
-word_list = ['Fig', 'Cloudberry', 'Mango', 'Cherry', 'Lime']
+word_list_of_fruits = ['Fig', 'Cloudberry', 'Mango', 'Cherry', 'Lime']
 
-#print(word_list)
-#word = random.choice(word_list)
-#print(word)
+print(word_list_of_fruits)
+word = random.choice(word_list_of_fruits)
+print(word)
 
-guess = input("Guess letter:")
+user_guess = input("Guess letter:")
 
-if len(guess) == 1 and guess.isalpha():
+if len(user_guess) == 1 and user_guess.isalpha():
     print("Good guess!")
 else:
     print("Oops! That is not a valid input.")
