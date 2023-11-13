@@ -22,6 +22,12 @@ I have created variables within the file milestone_2.py which can be used within
 ### Milestone_3.py defines functions
 This python file includes two functions for this project. One is to convert the users guess to lower case before checking if the guess is in the randomly generated word. The second asks the user for input and checks it is a valid single alphabetical guess.
 
+### Milestone_4.py defines the class Hangman
+This python file defines the class Hangman, which defines the attributes and methods required to play the game. 
+
+## Licence Information
+
+
 ## Licence Information
 
 
