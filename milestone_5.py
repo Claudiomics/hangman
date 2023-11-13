@@ -16,20 +16,13 @@ class Hangman:
         guess.lower()
         if guess in self.word:
             print(f"Good guess! '{guess}' is in the word.")
-            #for letter in self.word:
-             #   if letter == guess:
-              #      correct = self.word_guessed[guess]  # string indices must be integers, not 'str'.
-               #     correct.replace(letter) # needs enumerate
-
-            for index, letter in enumerate(self.word):
+            for letter in enumerate(self.word):
                 if letter == guess:
                     self.word_guessed.replace(letter)
                     print(self.word_guessed)
-                    if self.word > 1
-                self.num_letters - 1 # what happens if the guess fills more than 1 letter in the word? len(letters)?
-            
+                self.num_letters = self.num_letters - 1
         else:
-            self.num_lives - 1 # this doesn't decrease
+            self.num_lives = self.num_lives - 1 
             print(f"Sorry, '{guess}' is not in the word.")
             print(f"You have {self.num_lives} guesses left.")
 
@@ -42,7 +35,6 @@ class Hangman:
                 print("Invalid letter. Please, enter a single alphabetical character.")
             elif guess in self.list_of_guesses:
                 print("You've already guessed that letter!") # this always prints
-                break
             else:
                 if len(guess) == 1 and guess.isalpha():
                     self.check_guess(guess)
@@ -53,16 +45,15 @@ def play_game(word_list):
     num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
-        if num_lives == 0:
+        if game.num_lives == 0:
             print("You lost!")
         elif num_lives > 0:
-            ask_for_input()
-        elif num_lives > 0 and num_letters != 0:
+            game.ask_for_input()
+        elif game.num_lives > 0 and game.num_letters != 0:
             print("Congratulations!! You've won the game, you clever thing you.")
 
 fruit_list = ['fig', 'cloudberry', 'mango', 'cherry', 'lime']
 
 play_game(fruit_list)
-
 
 # %%
