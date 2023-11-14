@@ -1,9 +1,22 @@
 # %%
-
 import random
 
 class Hangman:
+    '''
+    This class is used to represent Hangman.
+
+    Attributes:
+        word_list (list) : the list of words to choose a random word from.
+        num_lives (int) : the number of lives the player has at the start of the game.
+        word (str) : the word to be guessed, picked randomly from the word_list.
+        word_guessed (list) : a list of the letters of the word, with _ for each letter not yet guessed.
+        num_letters (int) : the number of unique letters in the word that have not been guessed yet.
+        list_of_guesses (list) : a list of the guesses that have already been tried.
+    '''
     def __init__(self, word_list, num_lives=5):
+        '''
+        See help(Hangman) for accurate signature.
+        '''
         self.word_list = word_list 
         self.num_lives = num_lives
         self.word = random.choice(word_list)
@@ -13,6 +26,16 @@ class Hangman:
         self.list_of_guesses = []
     
     def check_guess(self, guess):
+        '''
+        This function is used to check the users guess is within the random word or not.
+
+        Args:
+            guess (str) : the users input to guess a letter.
+        
+        Returns:
+            list: the ammended letters within self.word_guessed as a list if the guess is in the word.   
+            str: a formatted string showing the numer or letters left to guess and lives available.
+        '''
         guess.lower()
         if guess in self.word:
             print(f"\nGood guess! '{guess}' is in the word.")
@@ -27,8 +50,15 @@ class Hangman:
             print(f"\nSorry, '{guess}' is not in the word.")
             print(f"You now only have {self.num_lives} lives left.")
         
-        
     def ask_for_input(self):
+        '''
+        This function is used to ask the user for an input and ensure it is a valid input.
+
+        Returns:
+            str: string statements describing what is wrong if the input is invalid.
+            list: updated list of all user guesses if the input is valid.
+
+        '''
         print(self.word_guessed)
         guess = input("Guess a letter: ")
         while True:
@@ -44,6 +74,19 @@ class Hangman:
                     break
 
 def play_game(word_list):
+    '''
+    This function is used to play the Hangman game using attributes and methods defined in the Hangman class.
+    
+    Args:
+        word_list (list) : the list of words to be randomly selected from.
+    
+    Returns:
+        str: string explaining to the user they have lost if they run out of lives.
+        func: play_game() if the user chooses to play again.
+        func: game.ask_for_input() if the user still has lives and letters to guess.
+        str: string congratulating the user if they have guessed all the letters in the word.
+        str: string thanking the user for playing if they choose not to play again.
+    '''
     num_lives = 5
     game = Hangman(word_list, num_lives)
     print(f"Welcome to Hangman! You have {num_lives} lives to complete the game.\n")
@@ -54,6 +97,8 @@ def play_game(word_list):
             user_choice = input(f"\nWould you like to play again? Y or N: ")
             if user_choice == "Y":
                 return play_game(word_list)     # calling a function within itself is called recursion
+            else:
+                print("Thanks for playing!")
             break
         elif num_lives > 0 and game.num_letters != 0:
             game.ask_for_input()
