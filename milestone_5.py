@@ -25,7 +25,7 @@ class Hangman:
         self.num_letters = len({letters for letters in self.word})
         self.list_of_guesses = []
     
-    def check_guess(self, guess):
+    def _check_guess(self, guess):
         '''
         This function is used to check the users guess is within the random word or not.
 
