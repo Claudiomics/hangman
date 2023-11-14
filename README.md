@@ -1,5 +1,6 @@
 # Project Hangman
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+<!-- Request for an AiCore badge to be made? -->
 
 ![Hangman Game](![An animated logo for the hangman game.](https://imgur.com/a/f3ZJDS4))
 
@@ -8,6 +9,8 @@
 Hangman is a classic guessing game where one player thinks of a word and the other player has to guess the letters and eventually the word. Each wrong guess of a letter or word reduces the players' lives by one until they run out and their stick figure is 'hanged'.
 
 > This is an implementation of the Hangman game, where the ***computer*** thinks of a word and the user tries to guess the letters with a certain number of attempts.
+
+This program uses the Python3 programming language and imported the library **random** in order to run the game.
 
 ## How to install and play this project
 
@@ -45,7 +48,9 @@ python3 milestone_5.py
 
 ## Licence Information
 
-The company AiCore reserves the rights to this project.
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
 
 
 
