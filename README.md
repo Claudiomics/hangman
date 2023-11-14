@@ -2,7 +2,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
 <!-- Request for an AiCore badge to be made? -->
 
-![Hangman Game](![An animated logo for the hangman game.](https://imgur.com/a/f3ZJDS4))
+![Hangman Game](https://imgur.com/a/f3ZJDS4)
 
 ## What is Hangman?
 
