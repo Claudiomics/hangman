@@ -8,9 +8,9 @@
 
 Hangman is a classic guessing game where one player thinks of a word and the other player has to guess the letters and eventually the word. Each wrong guess of a letter or word reduces the players' lives by one until they run out and their stick figure is 'hanged'.
 
-> This is an implementation of the Hangman game, where the ***computer*** thinks of a word and the user tries to guess the letters with a certain number of attempts.
+This is an implementation of the Hangman game, where the ***computer*** thinks of a word and the user tries to guess the letters with a certain number of attempts.
 
-This program uses the Python3 programming language and imported the library **random** in order to run the game.
+> This program uses the Python3 programming language and imported the library '**random**' in order to run the game.
 
 ## How to install and play this project
 
@@ -42,9 +42,9 @@ python3 milestone_5.py
 
 ## Future Improvements
 
-> Import a large list of words from a library to use within the game.
-> Include the classic hangman image instead of printing out "Lives left: ".
-> Graphical User Interface.
+1. Import a large list of words from a library to use within the game.
+2. Include the classic hangman image instead of printing out "Lives left: ".
+3. Graphical User Interface.
 
 ## Licence Information
 
